@@ -1,25 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import { useGlobalContext } from "../../context";
+import { CiSearch } from "react-icons/ci";
 
 const Search = () => {
+  const { handleChange, handleSubmit, text } = useGlobalContext();
 
-  //  console.log(text);
+  console.log(text);
 
   return (
     <header className="search-container">
-      <form > 
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Type favorite meal"
+          placeholder="Search..."
+          onChange={handleChange}
           className="form-input"
-          />
+          value={text}
+        />
         <button className="btn" type="submit">
-          Search
-        </button>
-        <button
-          className="btn btn-hipster"
-          type="button"
-        >
-          Suprise me
+          <CiSearch />
         </button>
       </form>
     </header>

@@ -13,7 +13,7 @@ export default function App() {
         <Route element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/singlepage" element={<SinglePage />} />
+          <Route path="/repo/:id" element={<SinglePage />} />
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

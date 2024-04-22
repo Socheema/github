@@ -5,7 +5,7 @@ Link
 export default function Header() {
   return (
     <header>
-      <div className="flex justify-between bg-green-500  text-white px-4 align-center py-2">
+      <div>
         <Link to="/">
           <h1>Chima</h1>
         </Link>
